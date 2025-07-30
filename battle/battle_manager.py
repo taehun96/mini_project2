@@ -11,13 +11,14 @@ class BattleManager:
         self.player.reset_health()
         self.enemy.reset_health()
 
-        print("Start Battle")
+        print(" ==== ⚔️Start Battle⚔️ ==== ")
         first_attack_player, second_attack_player = (self.player, self.enemy) if random.choice([True, False]) else (self.enemy, self.player)
         print(f"{first_attack_player.get_name()}님이 선공입니다.")
+        print()
 
         turn = 1
         while self.player.live() and self.enemy.live():
-            print(f"{turn}턴 : {first_attack_player.get_name()}님의 공격 턴")
+            print(f"{turn}턴 😎 : {first_attack_player.get_name()}님의 공격 턴 😎")
             time.sleep(1)
 
             if random.random() <= 0.7:
@@ -25,6 +26,9 @@ class BattleManager:
             else:
                 first_attack_player.special_attack(second_attack_player)
 
+            print(f">>> {first_attack_player.get_name()} 💝 체력: {first_attack_player.health}")
+            print(f">>> {second_attack_player.get_name()} 💝 체력: {second_attack_player.health}")
+            print()
             time.sleep(1.3)
 
             if not second_attack_player.live():
@@ -35,4 +39,4 @@ class BattleManager:
             turn += 1
 
         time.sleep(1)
-        print("End Battle")
+        print(" ==== 🔚End Battle🔚 ==== ")
