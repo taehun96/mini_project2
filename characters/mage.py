@@ -3,9 +3,9 @@
 from .character import Character
 
 class Mage(Character):
-    def __init__(self, name, level):
+    def __init__(self, name):
         # 마법사(Mage) 체력: 80 공격력: 18 마나: 100 
-        super().__init__(name, level, health = 80, attck_power = 18)
+        super().__init__(name, health = 80, attack_power = 18)
         self.mana = 100
         self.max_health = 80
         self.max_mana = 100

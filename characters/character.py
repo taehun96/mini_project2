@@ -1,11 +1,9 @@
 # 1.인스턴스 변수:
 from abc import ABC, abstractmethod
 class Character(ABC):
-    def __init__(self, name, level, health, attack_power):
+    def __init__(self, name, health, attack_power):
     #  name: 캐릭터 이름
         self.name = name
-    # level: 캐릭터 레벨
-        self.level = level
     # health: 체력
         self.health = health
     # attack_power: 공격력

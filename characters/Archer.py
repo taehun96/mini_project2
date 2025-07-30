@@ -1,11 +1,11 @@
-import random
 from .character import Character
+import random
 
 # 1. Character 클래스를 상속
 class Archer(Character):
-    def __init__(self, name, level):
+    def __init__(self, name):
         # 궁수(Archer) 체력: 85 공격력: 14
-        super().__init__(name, level, health = 85, attck_power = 14)
+        super().__init__(name, health = 85, attack_power = 14)
         self.max_health = 85
 
     # 2. 특수 공격: "치명타 사격(Fatal Shot)"
@@ -22,7 +22,7 @@ class Archer(Character):
         
         # 실패 시 기본 공격 적용
         else:
-            print(f"치명타 스킬이 발동하지 않습니다. [현재 공격력 : {damage}]")
+            print(f"치명타 스킬이 발동하지 않습니다.")
             self.attack(target)
 
     def reset_health(self):

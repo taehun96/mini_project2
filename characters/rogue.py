@@ -1,13 +1,13 @@
 # 도적(Rogue) 클래스
 # 랜덤 모듈을 이용
-import random
 from .character import Character
+import random
 
 # 1. Character 클래스를 상속
-class Rouge(Character):
-    def __init__(self, name, level):
+class Rogue(Character):
+    def __init__(self, name):
         # 도적(Rogue) 체력: 90 공격력: 12
-        super().__init__(name, level, health = 80, attck_power = 12)
+        super().__init__(name, health = 80, attack_power = 12)
         self.max_health = 90
 
 # 2. 특수 공격: "급습 (ambush)"
