@@ -15,6 +15,7 @@ class Mage(Character):
         # 마나 부족 시 예외 발생
         if self.mana < 20:
             print(f"{self.name}님의 마나가 부족하여 특수 공격 사용 불가 (현재 마나: {self.mana})")
+            self.attack(target) # 마나 부족시 일반 공격으로 대체
             return
         
         # 3. 특수 공격: “파이어볼 fireball"

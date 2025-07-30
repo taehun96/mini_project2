@@ -1,6 +1,6 @@
 # 1.인스턴스 변수:
 from abc import ABC, abstractmethod
-class character(ABC):
+class Character(ABC):
     def __init__(self, name, level, health, attack_power):
     #  name: 캐릭터 이름
         self.name = name
@@ -24,7 +24,7 @@ class character(ABC):
     def take_damage(self, damage):
         self.health -= damage
     # Is_alive(self): 체력이 0 이하이면 false 반환
-    def is_alive(self):
+    def live(self):
         return self.health > 0
     # reset_health(self): 캐릭터의 체력을 초기화
     def reset_health(self):
