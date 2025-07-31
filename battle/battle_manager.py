@@ -32,7 +32,9 @@ class BattleManager:
             time.sleep(1.3)
 
             if not second_attack_player.live():
-                print(f"{second_attack_player.get_name()}님이 죽었습니다. 축하합니다. {first_attack_player.get_name()} 승리!")
+                print(f"{second_attack_player.get_name()}님이 쓰러졌습니다.") 
+                print(f"{first_attack_player.get_name()}님의 승리!")
+                print()
                 break
 
             first_attack_player, second_attack_player = second_attack_player, first_attack_player

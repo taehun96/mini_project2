@@ -7,7 +7,7 @@ class DemonSlayer(Character):
         self.special_power = 35
         self.max_health = 100
 
-    def special_attack(self, target):
+    def special_attack(self, target: Character):
         print(f"{self.name}가 😈악마의 힘😈을 해방합니다!")
         
         damage = self.special_power

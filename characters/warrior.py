@@ -8,7 +8,7 @@ class Warrior(Character):
         super().__init__(name, health = 100, attack_power = 15)
         self.max_health = 100
     # 2. 특수 공격: "강력한 일격" (power_strike)
-    def special_attack(self, target):
+    def special_attack(self, target: Character):
         # 2배의 공격력을 가하지만, 본인도 5의 체력을 잃음
         damage = self.attack_power * 2
         print(f"{self.name}님의 '⚔️ 강력한 일격 ⚔️'스킬 발동! [공격력 2배: {damage}, 💝 체력 5소모]")

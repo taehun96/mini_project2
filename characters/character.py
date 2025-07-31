@@ -19,9 +19,10 @@ class Character(ABC):
     def special_attack(self, target):
         pass
     # take_damage(self, damage): 피해를 입으면 체력이 감소
-    def take_damage(self, damage):
-        self.health -= damage
-    # Is_alive(self): 체력이 0 이하이면 false 반환
+    def take_damage(self, damage: int):
+        self.health = max(0, self.health - damage)
+        print(f"{self.name}이(가) {damage} 피해를 입었습니다. (남은체력: {self.health})")
+    # live(self): 체력이 0 이하이면 false 반환
     def live(self):
         return self.health > 0
     # reset_health(self): 캐릭터의 체력을 초기화
@@ -29,7 +30,7 @@ class Character(ABC):
         pass
     # show_status(self): 캐릭터 정보를 출력
     def show_status(self):
-        print(f"[{self.name}] 레벨: {self.level} | 체력: {self.health} | 공격력: {self.attack_power}")
+        print(f"[{self.name}] 체력: {self.health} | 공격력: {self.attack_power}")
     # get_name(self): 캐릭터의 이름을 가져옴
     def get_name(self):
         return self.name

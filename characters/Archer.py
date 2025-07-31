@@ -9,7 +9,7 @@ class Archer(Character):
         self.max_health = 85
 
     # 2. 특수 공격: "치명타 사격(Fatal Shot)"
-    def special_attack(self, target):
+    def special_attack(self, target: Character):
         print(f"{self.name}님이 '🏹치명타 사격(Fatal Shot)🏹'스킬을 사용합니다!")
         # random() : 0이상 1미만의 float 난수 반환
         Fatal_Shot = random.random()

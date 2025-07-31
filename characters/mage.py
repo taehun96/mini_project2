@@ -11,7 +11,7 @@ class Mage(Character):
         self.max_mana = 100
 
     # 2. 추가 인스턴스 변수: mana(마나, 기본값 100)
-    def special_attack(self, target):
+    def special_attack(self, target: Character):
         # 마나 부족 시 예외 발생
         if self.mana < 20:
             print(f"{self.name}님의 마나가 부족하여 특수 공격 사용 불가 (현재 🧙‍♂️마나: {self.mana})")

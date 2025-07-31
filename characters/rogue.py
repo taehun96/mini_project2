@@ -11,7 +11,7 @@ class Rogue(Character):
         self.max_health = 90
 
 # 2. 특수 공격: "급습 (ambush)"
-    def special_attack(self, target):
+    def special_attack(self, target: Character):
         print(f"{self.name}님이 '🥷급습(Ambush)🥷'스킬을 사용합니다!")
         # random() : 0이상 1미만의 float 난수 반환
         ambush = random.random()
